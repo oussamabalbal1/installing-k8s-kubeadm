@@ -1,4 +1,4 @@
-# Installing Kubernetes using KubeADM in VMware Worstation
+# Installing Kubernetes using KubeAشية in VMware Worstation
 
 ## Prerequisites
 - 2+ vCPUs, 2GB+ RAM and 20GB+ free disk space per VM
@@ -10,9 +10,9 @@
 ### Installing Ubuntu in VMware
 1. Create two VMs name them as following :
 
-    - The `Master` VM will be our control node (we gonna deploy the kubernetes control plan on this node)
+    - The `Master` VM will be our control node (we're going to deploy the kubernetes control plan on this node)
 
-    - The `Worker` VM will be the worker node (we gonna deploy application on this node)
+    - The `Worker` VM will be the worker node (we're going to deploy applications on this node)
 2. Install Ubuntu on them (I gave each VM : 2 vCPU, 2.5GB RAM and 20GB of disk)
 3. Change the network adapter of the VMs to `Bridged `, So the VMs will be in the same network with our host
 <img src="images/kubeadm-res.png" width="600">
@@ -105,7 +105,7 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 #NOTE : YOU SHOUD INIT THE KUBEADM WITH --pod-network-cidr=10.244.0.0/16
 ```
 
-### Enable KUBECTL auto compelition (Master node)
+### Enable Kubectl Auto Compelition (Master node)
 ```bash
 # Install bash completion if not installed
 sudo apt-get install bash-completion -y
@@ -141,16 +141,16 @@ kubectl cluster-info
 kubectl create deployment nginx --image=nginx
 kubectl expose deployment nginx --port=80 --type=NodePort
 ```
-From my installation
-<img src="images/k8s-working.png" width="700">
+Verify system nodes/pods
+![Image](images/k8s-working.png)
 
-Check deployment and service
-<img src="images/dep-working.png" width="700">
+Verify deployment and service
+![Image](images/dep-working.png)
 
-Verify accessing to the deployment
-<img src="images/web-access.png" width="700">
+Verify application
+![Image](images/web-access.png)
 
-## Make a snapshot
+## Make Snapshots
 For this moment everything working great, we can take a snapshot of our VMs state in case of failure we can revert to our privious state..
 <img src="images/snapshot.png" width="700">
 
