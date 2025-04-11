@@ -1,4 +1,4 @@
-# Installing Kubernetes using KubeAشية in VMware Worstation
+# Installing Kubernetes using Kubeadm in VMware Worstation
 
 ## Prerequisites
 - 2+ vCPUs, 2GB+ RAM and 20GB+ free disk space per VM
