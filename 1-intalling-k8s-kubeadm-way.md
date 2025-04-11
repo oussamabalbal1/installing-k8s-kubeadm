@@ -1,4 +1,4 @@
-# Installing Kubernetes using Kubeadm in VMware Worstation
+# Installing Kubernetes using Kubeadm in VMware Worktation
 
 ## Prerequisites
 - 2+ vCPUs, 2GB+ RAM and 20GB+ free disk space per VM
@@ -17,7 +17,7 @@
 3. Change the network adapter of the VMs to `Bridged `, So the VMs will be in the same network with our host
 <img src="images/kubeadm-res.png" width="600">
 4. After the installation make sure that the VMs in the same network and they can access to the internet
-<img src="images/ping-vms.png" width="700">
+![Image](images/ping-vms.png)
 
 ### Disable Swap (Both nodes)
 ```bash
